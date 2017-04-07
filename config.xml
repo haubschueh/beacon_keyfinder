@@ -5,13 +5,13 @@
         id = "Beacon enabled App"
         version = "3.0">
 
-    <name>Beacon enabled App 3_0</name>
+    <name>Beacon KeyFinder</name>
 
     <description>
-        Hybride App zu einer kontextbezogenen Darstellung von Informationen
+        App die einem hilft seinen Schlüssel wieder zu finden
     </description>
 
-    <author>M. Zimmermann, G. Seilheimer, C. Merschroth</author>
+    <author>Moritz, Marco &amp; Severin</author>
 
     <icon src="img/app_logo.gif" />
 
