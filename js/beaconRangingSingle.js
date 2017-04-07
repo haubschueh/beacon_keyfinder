@@ -62,15 +62,19 @@ function showBeacon(pluginResult) {
 
     switch (pluginResult.beacons[0].proximity) {
         case "ProximityImmediate":
+            $("#statusInfo").text("FOUND IT!");
             $("#statusInfo").css({'background-color': 'green'});
             break;
         case "ProximityNear":
+            $("#statusInfo").text("ALMOST FOUND IT!");
             $("#statusInfo").css({'background-color': 'yellow'});
             break;
         case "ProximityFar":
+            $("#statusInfo").text("It's far away.");
             $("#statusInfo").css({'background-color': 'red'});
             break;
         case "ProximityUnknown":
+            $("#statusInfo").text("It's not in range at all.");
             $("#statusInfo").css({'background-color': 'grey'});
             break;
     }
