@@ -44,6 +44,11 @@ function showBeacon(pluginResult) {
     //mittels $('#beispiel').text('beispieltext');
     //-----------------------------------
     $('#uuid').text("UUID: " + pluginResult.beacons[0].uuid);
+    $('#major').text("UUID: " + pluginResult.beacons[0].major);
+    $('#minor').text("UUID: " + pluginResult.beacons[0].minor);
+    $('#proximity').text("UUID: " + JSON.stringify(pluginResult.beacons[0].proximity));
+    $('#accuracy').text("UUID: " + pluginResult.beacons[0].accuracy);
+    $('#statusInfo').text("UUID: " + pluginResult.beacons[0].statusInfo);
 
 
 
