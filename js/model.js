@@ -15,12 +15,18 @@ var mySingleBeacon = {
     //Inhalte fuer title und identifier frei waehlbar, z.B. "Im Sendebereich von Beacon:" und "Beacon 2"
     //-----------------------------------
 
-    uuid:"20CAE8A0-A9CF-11E3-A5E2-0800200C9A66",
-    identifier:"Beacon 2",
-    major:"212",
-    minor:"64020",
-    title: "Im Sendebereich von Beacon:"
+    uuid: "f7826da6-4fa2-4e98-8024-bc5b71e3052f",
+    identifier: "B34C0N",
+    major: "3",
+    minor: "34332",
+    title: "M4RC0"
 };
+
+/*
+f7826da6-4fa2-4e98-8024-bc5b71e3052f	3000	34332
+f7826da6-4fa2-4e98-8024-bc5b71e3052f	5000	29169
+f7826da6-4fa2-4e98-8024-bc5b71e3052f	5000	14094
+*/
 
 //-----------------------------------
 //TODO 2.0.1: Array myBeacons verstehen, Major- und Minor-Kennung anpassen
