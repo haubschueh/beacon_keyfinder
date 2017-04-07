@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">                                                  <!-- utf-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- stop zoom -->
+    <meta name="author" content="M. Zimmermann; G. Seilheimer & C. Merschroth">
+
+    <title>Beacon enabled App</title>
+
+    <!-- CSS jquery -->
+    <link rel="stylesheet" href="lib/jQuery/jquery.mobile-1.4.5.min.css" />
+
+</head>
+
+<body>
+
+<!--------------------------------------------------------------------------------------------------------->
+<!-- PAGE INDEX -->
+<!--------------------------------------------------------------------------------------------------------->
+    <section data-role="page" id="page-index" data-title="Beacon enabled App - Startseite | page-index">
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- HEADER  -->
+        <!---------------------------------------------------------------------------------------------->
+        <header data-role="header">
+
+            <h1>Beacon enabled App</h1>
+
+        </header><!-- /header -->
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- CONTENT -->
+        <!---------------------------------------------------------------------------------------------->
+        <article class="ui-content">
+
+
+            <button data-role="button" id="startMonitoringSingleBeaconButton" data-theme="b">Suche nach einem Beacon (monitoring)</button>
+
+            <button data-role="button" id="startMonitoringMultipleBeaconButton">Suche nach Beacons (monitoring)</button>
+
+            <button data-role="button" id="startRangingBeaconButton">Suche nach einem Beacon (ranging)</button>
+
+
+        </article><!-- /content -->
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- FOOTER -->
+        <!---------------------------------------------------------------------------------------------->
+        <footer data-role="footer">
+
+            <h6>&copy; 2016 by HSLU + HSO</h6>
+
+        </footer><!-- /footer -->
+
+    </section><!-- /page -->
+
+<!--------------------------------------------------------------------------------------------------------->
+<!-- PAGE DETAIL -->
+<!--------------------------------------------------------------------------------------------------------->
+    <section data-role="page" id="page-detail" data-title="Beacon enabled App - Detail | page-detail">
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- HEADER -->
+        <!---------------------------------------------------------------------------------------------->
+        <header data-role="header">
+
+            <a href="#" data-icon="back" data-rel="back" id="backHomeButton">Zur&uuml;ck</a>
+            <h1>Info zu Ihrer aktuellen Position</h1>
+
+        </header><!-- /header -->
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- CONTENT -->
+        <!---------------------------------------------------------------------------------------------->
+        <article class="ui-content">
+
+            <button data-role="button" id="stopMonitoringSingleBeaconButton" data-theme="b" class="ui-disabled">Suche beenden (ein Beacon)</button>
+
+            <button data-role="button" id="stopMonitoringMultipleBeaconButton" class="ui-disabled">Suche beenden (mehrere)</button>
+
+            <div id="detailTitle"></div>
+            <div id="detailText"></div>
+            <div id="detailSpecialOffer"></div>
+
+            <p id="detailInfo"></p>
+
+        </article><!-- /content -->
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- FOOTER -->
+        <!---------------------------------------------------------------------------------------------->
+        <footer data-role="footer">
+
+            <h6>&copy; 2016 by HSLU + HSO</h6>
+
+        </footer><!-- /footer -->
+
+    </section><!-- /page -->
+
+<!--------------------------------------------------------------------------------------------------------->
+<!-- PAGE BEACONINFO -->
+<!--------------------------------------------------------------------------------------------------------->
+    <section data-role="page" id="page-beaconinfo" data-title="Beacon enabled App - Beaconinfo | page-beaconinfo">
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- HEADER -->
+        <!---------------------------------------------------------------------------------------------->
+        <header data-role="header">
+
+            <a href="#" data-icon="back" data-rel="back">Zur&uuml;ck</a>
+            <h1>Suche Beacon</h1>
+
+        </header><!-- /header -->
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- CONTENT -->
+        <!---------------------------------------------------------------------------------------------->
+        <article class="ui-content">
+
+            <h3>Suche nach Bluetooth Beacon in der Umgebung</h3>
+
+            <button data-role="button" id="stopRangingBeaconButton">Suche beenden</button>
+
+            <p>Daten des Beacons</p>
+
+            <p id="uuid"></p>
+            <p id="major"></p>
+            <p id="minor"></p>
+            <p id="proximity"></p>
+            <p id="accuracy"></p>
+            <hr />
+            <p id="statusInfo"></p>
+
+
+        </article><!-- /content -->
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- FOOTER -->
+        <!---------------------------------------------------------------------------------------------->
+        <footer data-role="footer">
+
+            <h6>&copy; 2016 by HSLU + HSO</h6>
+
+        </footer><!-- /footer -->
+
+    </section>
+
+    <!-- js jquery -->
+    <script src="lib/jQuery/jquery-2.2.4.min.js"></script>
+    <script src="lib/jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- js Phonegap -->
+    <script src="phonegap.js"></script>
+
+    <script src="js/piwik.js"></script>                         <!-- Tracking -->
+
+    <!-- Eigene JS-Bibliotheken -->
+    <script src="js/beacon.js"></script>                        <!-- Beaconfunktionen -->
+    <script src="js/beaconRangingSingle.js"></script>           <!-- Beaconfunktionen -->
+
+    <script src="js/model.js"></script>                         <!-- Array von Beacons -->
+
+    <script src="js/controller.js"></script>                    <!-- Events und allgemeine Funktionen-->
+
+</body>
+
+
+</html>

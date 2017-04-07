@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "Beacon enabled App"
+        version = "3.0">
+
+    <name>Beacon enabled App 3_0</name>
+
+    <description>
+        Hybride App zu einer kontextbezogenen Darstellung von Informationen
+    </description>
+
+    <author>M. Zimmermann, G. Seilheimer, C. Merschroth</author>
+
+    <icon src="img/app_logo.gif" />
+
+    <preference name="phonegap-version" value="cli-6.3.0" />
+
+    <plugin name="com.unarin.cordova.beacon" spec="3.4.0" source="npm" />
+
+    <plugin name="de.appplant.cordova.plugin.local-notification" spec="0.8.4" source="npm" />
+
+    <plugin name="cordova-plugin-vibration" spec="2.1.1" source="npm" />
+
+    <plugin name="cordova-plugin-flashlight" spec="3.0.0" source="npm" />
+
+    <!-- Um Datenbankkommunikation zuzulassen -->
+    <plugin name="cordova-plugin-whitelist" spec="1.2.2" source="npm" />
+    <allow-navigation href="*://*.contic.de/*" />
+    <allow-intent href="*://*.contic.de/*" />
+    <access origin="*" />
+
+    <gap:platform name="android" />
+    <gap:platform name="ios" />
+
+
+</widget>
