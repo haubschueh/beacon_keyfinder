@@ -37,7 +37,7 @@ function startRangingSingleBeacon(){
 }
 
 function showBeacon(pluginResult) {
-
+    console.log(pluginResult);
     //-----------------------------------
     //TODO 3.1: Beacon-Objekt ausgeben: uuid, major, minor, proximity und accuracy
     //in entsprechende HTML-Elemente in page-beaconinfo
