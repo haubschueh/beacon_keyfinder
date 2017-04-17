@@ -3,21 +3,33 @@
  */
 
 function toPageDetailRanging(){
-    $(':mobile-pagecontainer').pagecontainer('change', '#page-beaconinfo', {transition: 'slideup'});
-
-    startRangingSingleBeacon();
+    if($("input[name=key]").is(':checked')) {
+        $(':mobile-pagecontainer').pagecontainer('change', '#page-beaconinfo', {transition: 'slideup'});
+        startRangingSingleBeacon();
+    }
+    else{
+        $('#debug').text("Select key first");
+    }
 }
 
 function startRangingSingleBeacon(){
 
-    $('#statusInfo').append('Started ');
+    $('#statusInfo').append('Started');
+    selectedKeyIndex = 0;
+    for(var i in myBeacons){
+        if(myBeacons[i].identifier == $('input[name=key]:checked').val()){
+            selectedKeyIndex = i;
+        }
+    }
 
     var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(
-        mySingleBeacon.identifier,
-        mySingleBeacon.uuid,
-        mySingleBeacon.major,
-        mySingleBeacon.minor
+        myBeacons[selectedKeyIndex].identifier,
+        myBeacons[selectedKeyIndex].uuid,
+        myBeacons[selectedKeyIndex].major,
+        myBeacons[selectedKeyIndex].minor
     );
+
+    $('#searchingTitle').text("Searching for key " + myBeacons[selectedKeyIndex].title + " ("+ myBeacons[selectedKeyIndex].text +")");
 
     var delegate = new cordova.plugins.locationManager.Delegate();
 

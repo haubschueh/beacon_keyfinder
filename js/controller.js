@@ -7,12 +7,24 @@
 document.addEventListener("deviceready", init, false);
 
     function init(){
-        
-        $('#startMonitoringSingleBeaconButton').click(toPageDetailSingleBeacon);
-        $('#stopMonitoringSingleBeaconButton').click(stopMonitoringSingleBeacon);
-        
-        $('#startMonitoringMultipleBeaconButton').click(toPageDetailMonitoring);
-        $('#stopMonitoringMultipleBeaconButton').click(stopMonitoringBeacons);
+
+        var table = $("<table/>").addClass('keys');
+
+        table.addClass('ui-responsive')
+        $('table.keys').attr('data-role', 'table');
+        for (var i in myBeacons) {
+            var row = $("<tr/>");
+            var tdRadio = $("<td/>");
+            value="' + i + '"
+            tdRadio.append($('<input type="radio" name="key" value="' + myBeacons[i].identifier +'" id="' + myBeacons[i].identifier +'">'));
+            tdRadio.append($('<label for="' + myBeacons[i].identifier +'">'+ myBeacons[i].title+'</label>'));
+            row.append(tdRadio)
+            row.append($("<td/>").text(myBeacons[i].text))
+
+            table.append(row);
+
+        }
+        $("#keyFinderContent").append(table);
 
         $('#startRangingBeaconButton').click(toPageDetailRanging);
         $('#stopRangingBeaconButton').click(stopRangingSingleBeacon);
