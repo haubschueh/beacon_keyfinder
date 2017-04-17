@@ -22,7 +22,8 @@ var mySingleBeacon = {
     title: "M4RC0"
 };
 
-/*f7826da6-4fa2-4e98-8024-bc5b71e3052f	3000	34332	Y26j
+/*
+f7826da6-4fa2-4e98-8024-bc5b71e3052f	3000	34332	Y26j
 f7826da6-4fa2-4e98-8024-bc5b71e3052f	5000	29169	VTTk
 f7826da6-4fa2-4e98-8024-bc5b71e3052f	5000	14094	pCtf
 */
