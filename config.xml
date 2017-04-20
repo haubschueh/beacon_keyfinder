@@ -13,7 +13,7 @@
 
     <author>Moritz, Marco &amp; Severin</author>
 
-    <icon src="img/app_logo.gif" />
+    <icon src="img/app_logo.png" />
 
     <preference name="phonegap-version" value="cli-6.3.0" />
 
