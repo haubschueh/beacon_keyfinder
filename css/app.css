@@ -1,4 +1,5 @@
 #onscreen-logo {
+    margin: auto;
     width: 200px;
     height: 200px;
     background-image: url(../img/app_logo_big.png);
